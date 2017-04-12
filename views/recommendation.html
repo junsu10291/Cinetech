@@ -1,0 +1,32 @@
+<div class="container">
+    <!--Movies List-->
+    <div class="row recommendation-container">
+        <div 
+            ng-repeat="movie in movies"
+            class="col-xs-6 col-md-3"
+            ng-mouseover="movie.show = true"
+            ng-mouseleave="movie.show = false">
+            <a 
+                ng-click="modalTrigger()"
+                class="thumbnail" >
+                <img src="../img/default_poster.jpg">
+            </a>
+            <div id="well-wrapper">
+                <div class="well" ng-show="movie.show">
+                    <div id="title"> 20th Century Women </div>
+                    <div id="stars">
+                        <span 
+                            ng-repeat="star in stars"
+                            ng-class="{'glyphicon-star': star.fill, 'glyphicon-star-empty': !star.fill}"
+                            ng-mouseover="focusStars(star.id)"
+                            ng-mouseleave="unfocusStars()"
+                            class="glyphicon"
+                            >
+                            </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
