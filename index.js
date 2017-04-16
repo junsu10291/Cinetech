@@ -18,6 +18,13 @@ app.config(function($routeProvider) {
 });
 
 app.controller("appController", function($scope) {
+    $scope.profile_panel_content = 
+    [
+        {'icon': "glyphicon glyphicon-king", 'text': "MOVIE GURU"},
+        {'icon': "glyphicon glyphicon-facetime-video", 'text': "PLAY TIME"}, 
+        {'icon': "glyphicon glyphicon-time", 'text': "NUM RATED"}, 
+        {'icon': "glyphicon glyphicon-star", 'text': "AVG RATING"} 
+    ];
     $scope.movies = [];
     $scope.stars = [];
     $scope.modal_stars = [];

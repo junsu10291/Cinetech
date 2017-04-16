@@ -1,6 +1,7 @@
 body { 
     padding-top: 50px; 
     overflow-x: hidden;
+    background-color: rgba(218, 218, 217, 0.81);
 }
 
 .well {
@@ -174,7 +175,18 @@ body {
 }
 
 .profile-card {
-    height: 300px;
+    height: 150px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    float: left;
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    color: #545151;
 }
 
 .panel-login {
@@ -275,7 +287,7 @@ body {
 }
 
 #google-login {
-    background-color: white;
+    background-color: #fff;
     border-color: #c4c4c4;
     color: #484848;
     font: 15px system-ui;
@@ -408,8 +420,42 @@ body {
     width: 1920px;
 }
 
+.profile-graph-card {
+    height: 350px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    text-align: center;
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    color: #545151;
+    width: 47%;
+    display:inline-block;
+    float: left;
+}
+
+.profile-graph-card-title {
+    font-size: 30px;
+    border-bottom: 2px solid black;
+    margin-left: 20px;
+}
+
 .genre-movie-block > #well-wrapper {
     padding-right: 0;
+}
+
+#genre-title {
+    font-family: "Arial Rounded MT Bold", "Helvetica Rounded", Arial, sans-serif;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 900;
+    color: #545151;
+    font-size: 24px;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .genre-top {
@@ -417,9 +463,10 @@ body {
     overflow-x: scroll;
     overflow-y: hidden;
     padding-left: 15px;
-    background: linear-gradient(rgba(255, 128, 132, 0.15), #fff);
+    background-color:rgb(255, 255, 255);
+    border-radius: 10px;
+    /*background: linear-gradient(rgba(255, 128, 132, 0.15), #fff);*/
     margin-bottom: 20px;
-    border: 1px solid #de8b8e;
 }
 
 .genre-movie-block {
@@ -427,4 +474,60 @@ body {
     float: left;
     margin-right: 30px;
     position: relative;
+}
+
+.genre-top-personal {
+    position: relative;
+    top: 20px;
+}
+
+.profile-picture {
+    width: 20%;
+    display: inline-block;
+    width: 20%;
+    display: inline-block;
+    font-size: 21px;
+}
+
+.profile-card-wrapper {
+    display: table;
+    width: 100%;
+}
+
+.profile-info {
+    display: inline-block;
+    width: 75%;
+    margin-left: 5%;
+}
+
+.profile-card-picture-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 20px;
+}
+
+.profile-card-blocks {
+    width: 25%;
+    background-color: linear-gradient(rgba(255, 128, 132, 0.15), #fff);
+    display: inline-block;
+    height: 100%;
+    float: left;
+
+}
+
+.profile-card-blocks-content-wrapper {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 900;
+    color: #545151;
+}
+
+.custom-film-glyphicon {
+    font-size: 70px;
+    color: #607D8B;
+    margin-top:10px;
 }

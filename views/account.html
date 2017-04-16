@@ -1,17 +1,99 @@
 <div class="container">
-    <div class="col-md-10 col-md-offset-1">
-        <div class="panel panel-default col-md-12">
-            <img src="./img/empty_profile.gif" class="img-circle" id="account-image">
-            <div id="account-name"> JUNSU CHOI </div>
-        </div>
-        <div class="col-md-10 col-md-offset-1">
-            <div
-                ng-repeat="card in [1,2,3,4,5,6,7]" 
-                class="panel panel-default col-md-5 profile-card"
-                ng-class-even="'col-md-offset-2'">
-
+    <div class="profile-card-wrapper">
+        <div class="profile-card profile-picture">  
+            <div class="profile-card-picture-wrapper">
+                <img src="./img/empty_profile.gif" class="img-circle" id="account-image">
+                <div id="account-name"> JUNSU CHOI </div>
             </div>
         </div>
-        
+        <div class="profile-card profile-info">  
+            <div
+                ng-repeat="content in profile_panel_content" 
+                class="profile-card-blocks">
+                    <div class="{{ content.icon }} custom-film-glyphicon"></div>
+                    <div class="profile-card-blocks-content-wrapper">
+                        <div class="profile-card-blocks-number">
+                            9 7 3 H
+                        </div>
+                        <div class="profile-card-blocks-text">
+                            {{content.text}}
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    <!--GRAPHS-->
+    <div class="profile-graph-card">
+        <div class="profile-graph-card-title" style="width: 38%">
+            Favorite Tags
+        </div>
+        <img 
+            src="../img/wordmap.png" 
+            style="height: 500px;
+                    width: 150%;
+                    margin-left: -130px;
+                    margin-top: -100px;">
+    </div>
+    <div class="profile-graph-card" style="margin-left: 5%">
+        <div class="profile-graph-card-title" style="width: 43%">
+            Favorite Actors
+        </div>
+        <img 
+            src="../img/fav_actors.png" 
+            style="height: 300px; width: 70%;">
+    </div>
+    <div class="profile-graph-card">
+        <div class="profile-graph-card-title" style="width: 46%">
+            Favorite Regions
+        </div>
+        <img 
+            src="../img/fav_region.png" 
+            style="height: 300px; width: 70%;">
+    </div>
+    
+    <div class="profile-graph-card" style="margin-left: 5%">
+        <div class="profile-graph-card-title" style="width: 37%">
+            Ratings Stats
+        </div>
+        <img 
+            src="../img/rating_stats.png" 
+            style="height: 300px; width: 70%;">
+    </div>
+
+    <div
+        id="genre-action" 
+        class="genre-top genre-top-personal">
+        <div id="genre-title">
+            Rated Movies
+        </div>
+        <div class="genre-container">
+            <div 
+                ng-repeat="movie in [{'show': false}, {'show': false}, {'show': false}, {'show': false}, {'show': false}, {'show': false}, {'show': false}, {'show': false}, {'show': false}]"
+                class="genre-movie-block"
+                ng-mouseover="movie.show = true"
+                ng-mouseleave="movie.show = false">
+                <a 
+                    ng-click="modalTrigger()"
+                    class="thumbnail" >
+                    <img src="../img/default_poster.jpg">
+                </a>
+                <div id="well-wrapper">
+                    <div class="well" ng-show="movie.show">
+                        <div id="title"> 20th Century Women </div>
+                        <div id="stars">
+                            <span 
+                                ng-repeat="star in stars"
+                                ng-class="{'glyphicon-star': star.fill, 'glyphicon-star-empty': !star.fill}"
+                                ng-mouseover="focusStars(star.id)"
+                                ng-mouseleave="unfocusStars()"
+                                class="glyphicon"
+                                >
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </div>
